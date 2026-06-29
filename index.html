@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilal Assbai - Traducteur Copropriete Belgique</title>
+  <meta name="description" content="Avant de signer votre copropriete, comprenez vraiment ce que vous allez payer. Audit copropriete sur vos vrais documents - Belgique." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #F8F9FA;
+      --bg-alt:     #EDF4F3;
+      --white:      #FFFFFF;
+      --text:       #1C2730;
+      --text-muted: #637381;
+      --accent:     #2B6A6A;
+      --accent-dk:  #1E4F4F;
+      --border:     #E2E8EC;
+      --radius:     10px;
+      --font:       'Outfit', sans-serif;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      text-decoration: none;
+      font-family: var(--font);
+      font-weight: 600;
+      font-size: 0.925rem;
+      padding: 12px 24px;
+      border-radius: var(--radius);
+      transition: background 0.18s;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover { background: var(--accent-dk); }
+    .btn-primary:active { transform: translateY(1px); }
+
+    .btn-ghost {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.925rem;
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid var(--accent);
+      white-space: nowrap;
+      line-height: 1.4;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .btn-ghost:hover { color: var(--accent-dk); border-color: var(--accent-dk); }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: calc(100dvh - 64px);
+      display: flex;
+      align-items: center;
+      padding: 60px 0;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 3.8vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 430px;
+      margin-bottom: 34px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    /* Portrait */
+    .portrait-wrap {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .portrait-placeholder {
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 3 / 4;
+      border-radius: 16px;
+      background: var(--bg-alt);
+      border: 2px dashed var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      text-align: center;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    /* ===== POUR QUI ===== */
+    .section-pour-qui {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .section-header {
+      margin-bottom: 48px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 560px;
+      font-size: 0.975rem;
+    }
+
+    .verbatims {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .verbatim-card {
+      background: var(--bg);
+      border-left: 3px solid var(--accent);
+      padding: 24px 22px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .verbatim-card blockquote {
+      font-size: 0.975rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+
+    .verbatim-card cite {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+
+    /* ===== SOLUTION ===== */
+    .section-solution {
+      padding: 80px 0;
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .solution-copy h2 {
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+
+    .solution-copy p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      line-height: 1.72;
+      font-size: 0.975rem;
+    }
+
+    .solution-copy .cta-block {
+      margin-top: 28px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      padding-top: 6px;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--bg-alt);
+      border: 1.5px solid var(--accent);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-body strong {
+      display: block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 3px;
+    }
+
+    .step-body p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    /* ===== DIFFERENTIEL ===== */
+    .section-diff {
+      padding: 80px 0;
+      background: var(--text);
+      color: var(--white);
+    }
+
+    .section-diff .section-header h2 { color: var(--white); }
+    .section-diff .section-header p  { color: rgba(255,255,255,0.55); }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .diff-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      padding: 32px 28px;
+      border-radius: var(--radius);
+    }
+
+    .diff-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+
+    .diff-card p {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.58);
+      line-height: 1.68;
+    }
+
+    /* ===== A PROPOS ===== */
+    .section-about {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 14px;
+      background: var(--bg-alt);
+      border: 2px dashed var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      text-align: center;
+      gap: 8px;
+      line-height: 1.5;
+    }
+
+    .about-copy h2 {
+      font-size: clamp(1.5rem, 2.6vw, 1.95rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+
+    .about-copy p {
+      color: var(--text-muted);
+      line-height: 1.78;
+      margin-bottom: 14px;
+      font-size: 0.975rem;
+    }
+
+    .about-copy .pull-quote {
+      color: var(--text);
+      font-style: italic;
+      font-size: 1rem;
+      padding-left: 16px;
+      border-left: 3px solid var(--accent);
+      margin: 20px 0;
+      line-height: 1.65;
+    }
+
+    .about-sig {
+      margin-top: 24px;
+      font-weight: 600;
+      font-size: 0.975rem;
+      color: var(--text);
+    }
+
+    .about-sig small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ===== CTA FINAL ===== */
+    .section-cta {
+      padding: 96px 0;
+      background: var(--bg-alt);
+      text-align: center;
+    }
+
+    .section-cta h2 {
+      font-size: clamp(1.65rem, 3.5vw, 2.45rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      max-width: 620px;
+      margin: 0 auto 14px;
+      line-height: 1.22;
+    }
+
+    .section-cta .sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+
+    .cta-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .cta-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--accent); }
+
+    .footer-tariqa {
+      font-size: 0.72rem;
+      color: #CBD5E0;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .diff-grid { grid-template-columns: 1fr 1fr; }
+      .about-inner { grid-template-columns: 1fr; gap: 36px; }
+      .about-photo-placeholder { max-width: 260px; margin: 0 auto; aspect-ratio: 1/1; }
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 48px 0; min-height: auto; }
+      .hero .container { grid-template-columns: 1fr; gap: 36px; }
+      .portrait-wrap { justify-content: center; }
+      .portrait-placeholder { max-width: 260px; aspect-ratio: 1/1; }
+      .hero p { max-width: 100%; }
+      .verbatims { grid-template-columns: 1fr; }
+      .solution-grid { grid-template-columns: 1fr; gap: 40px; }
+      .section-cta { padding: 64px 0; }
+    }
+
+    @media (max-width: 640px) {
+      .diff-grid { grid-template-columns: 1fr; }
+      .hero-actions { gap: 20px; }
+      footer .container { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-logo">Bilal <span>Assbai</span></a>
+      <a href="#audit" class="btn-primary">Reserver mon audit</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-copy">
+        <span class="hero-tag">Audit Copropriete - Belgique</span>
+        <h1>Avant de signer, comprenez ce que vous allez vraiment payer.</h1>
+        <p>J'analyse vos documents de copropriete et vous explique - jusqu'a ce que ce soit clair.</p>
+        <div class="hero-actions">
+          <!-- TODO : remplacer href="https://calendly.com/acexbrussels/call-copropriete-faire-le-point" par votre lien Calendly -->
+          <a href="https://calendly.com/acexbrussels/call-copropriete-faire-le-point" class="btn-primary">Reserver mon audit</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEiOy0_72bwu4ENz1MvH9B3d8CA_ilNwSEg0gdo-xYXLu9qw/viewform" target="_blank" rel="noopener" class="btn-ghost">Autre demande</a>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <img src="bilal.jpg" alt="Bilal Assbai, agent immobilier IPI specialise copropriete Belgique" style="width:100%;max-width:420px;aspect-ratio:3/4;border-radius:16px;object-fit:cover;object-position:center top;display:block;margin-left:auto;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- POUR QUI -->
+  <section class="section-pour-qui">
+    <div class="container">
+      <div class="section-header">
+        <h2>Vous reconnaissez-vous ici ?</h2>
+        <p>Ces phrases, je les entends depuis 8 ans. Des personnes qui signent sans avoir compris ce dans quoi elles s'engagent.</p>
+      </div>
+      <div class="verbatims">
+        <div class="verbatim-card">
+          <blockquote>"Je comprends pas ce que ca veut dire, mais je dois signer bientot."</blockquote>
+          <cite>Primo-acquereur, avant signature compromis</cite>
+        </div>
+        <div class="verbatim-card">
+          <blockquote>"J'ai essaye de lire les documents, mais je ne sais pas quoi regarder concretement."</blockquote>
+          <cite>Future copropietaire, via notaire</cite>
+        </div>
+        <div class="verbatim-card">
+          <blockquote>"Si j'avais su avant... je pensais que c'etait normal de pas comprendre."</blockquote>
+          <cite>Copropietaire, apres coup</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="section-solution">
+    <div class="container">
+      <div class="solution-grid">
+        <div class="solution-copy">
+          <h2>Ce que je fais pour vous</h2>
+          <p>J'analyse les documents reels de votre copropriete - ceux que vous avez entre les mains - et je vous remets un rapport structure qui repond a vos vraies questions.</p>
+          <p>Charges mensuelles, travaux votes, tresorerie, appels de fonds a venir. Tout ce que vous devez savoir avant de signer.</p>
+          <p>Ensuite, on se retrouve en appel. Je vous explique votre rapport, section par section. On avance ensemble jusqu'a ce que ce soit clair pour vous.</p>
+          <div class="cta-block">
+            <a href="#audit" class="btn-primary">Reserver mon audit</a>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>Un premier appel</strong>
+              <p>On fait connaissance. Je comprends votre situation et vous explique le process.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>Vous m'envoyez vos documents</strong>
+              <p>Apres signature du contrat et paiement, vous me transmettez les documents de la copropriete.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>J'analyse et je redige</strong>
+              <p>Je produis un rapport complet en 3 jours ouvrables selon la taille de la copropriete.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <strong>Appel de presentation</strong>
+              <p>Je vous explique le rapport. Vous posez vos questions. On ne s'arrete pas tant que ce n'est pas clair.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIEL -->
+  <section class="section-diff">
+    <div class="container">
+      <div class="section-header">
+        <h2>Pourquoi moi, et pas internet ?</h2>
+        <p>Internet est flou. Le syndic est deborde. Voici la difference.</p>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-card">
+          <h3>8 ans dans un bureau de syndic</h3>
+          <p>Je suis passe par l'autre cote. Je sais ce que les syndics voient, ce qu'ils ne disent pas, et comment lire les documents comme eux le font.</p>
+        </div>
+        <div class="diff-card">
+          <h3>Vos vrais documents, pas des exemples generiques</h3>
+          <p>Je travaille sur votre dossier reel - vos PV, votre budget, votre bilan. Pas sur des exemples theoriques.</p>
+        </div>
+        <div class="diff-card">
+          <h3>Compris, pas seulement explique</h3>
+          <p>Je vous explique jusqu'a ce que vous ayez la clarte dont vous avez besoin. Pas jusqu'a ce que l'heure soit ecoulee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A PROPOS -->
+  <section class="section-about">
+    <div class="container">
+      <div class="about-inner">
+        <div>
+          <img src="bilal.jpg" alt="Bilal Assbai" style="width:100%;aspect-ratio:4/5;border-radius:14px;object-fit:cover;object-position:center top;display:block;" />
+        </div>
+        <div class="about-copy">
+          <h2>Pourquoi j'ai cree ce service</h2>
+          <p>Un jour, une maman m'a appele. Elle venait de quitter sa maison pour un appartement en copropriete. Personne ne lui avait vraiment explique - ni le syndic, ni le notaire, ni internet.</p>
+          <p class="pull-quote">"Si j'avais su avant... je croyais que c'etait normal de pas comprendre."</p>
+          <p>Ce scenario s'est repete. Des dizaines de fois. Toujours les memes mots. Toujours les memes surprises apres la signature.</p>
+          <p>Tous les documents etaient disponibles. L'information etait la. Mais personne ne prenait le temps de traduire - vraiment traduire - ce que ca voulait dire pour cette personne, dans cette copropriete, avec ces charges.</p>
+          <p>C'est pour ca que j'existe.</p>
+          <div class="about-sig">
+            Bilal Assbai
+            <small>Agent immobilier IPI, specialise gestion immobiliere - Belgique</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section-cta" id="audit">
+    <div class="container">
+      <h2>Vous meritez de signer en connaissance de cause.</h2>
+      <p class="sub">Prenez rendez-vous pour votre audit copropriete. On commence par un appel - vous posez vos questions, je vous explique le process.</p>
+      <div class="cta-stack">
+        <!-- TODO : remplacer href="https://calendly.com/acexbrussels/call-copropriete-faire-le-point" par votre lien Calendly -->
+        <a href="https://calendly.com/acexbrussels/call-copropriete-faire-le-point" class="btn-primary">Reserver mon audit</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEiOy0_72bwu4ENz1MvH9B3d8CA_ilNwSEg0gdo-xYXLu9qw/viewform" target="_blank" rel="noopener" class="btn-ghost">Autre service ? Me contacter</a>
+        <p class="cta-note">Formation copropriete et consultance expert disponibles sur demande.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>2026 Bilal Assbai - Agent immobilier IPI, Belgique</p>
+      <p class="footer-tariqa">Collectif Tariqa PRO</p>
+    </div>
+  </footer>
+
+</body>
+</html>

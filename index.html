@@ -224,6 +224,69 @@
       font-style: normal;
     }
 
+    /* ===== OFFRES ===== */
+    .section-offres {
+      padding: 80px 0;
+      background: var(--bg-alt);
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .offer-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .offer-card.featured {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .offer-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .offer-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .offer-price {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent-dk);
+      margin-bottom: 14px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .offer-price span {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .offer-desc {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
     /* ===== SOLUTION ===== */
     .section-solution {
       padding: 80px 0;
@@ -483,6 +546,7 @@
       .portrait-placeholder { max-width: 260px; aspect-ratio: 1/1; }
       .hero p { max-width: 100%; }
       .verbatims { grid-template-columns: 1fr; }
+      .offers-grid { grid-template-columns: 1fr; }
       .solution-grid { grid-template-columns: 1fr; gap: 40px; }
       .section-cta { padding: 64px 0; }
     }
@@ -541,6 +605,32 @@
         <div class="verbatim-card">
           <blockquote>"Si j'avais su avant... je pensais que c'était normal de pas comprendre."</blockquote>
           <cite>Copropriétaire, après coup</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFRES -->
+  <section class="section-offres" id="offres">
+    <div class="container">
+      <div class="section-header">
+        <h2>Deux façons de commencer</h2>
+        <p>Selon où vous en êtes, l'audit complet ou un simple échange peuvent suffire à y voir clair.</p>
+      </div>
+      <div class="offers-grid">
+        <div class="offer-card featured">
+          <span class="offer-eyebrow">Le plus complet</span>
+          <h3>Audit Copropriété</h3>
+          <div class="offer-price">650€ <span>analyse complète</span></div>
+          <p class="offer-desc">L'analyse de vos 6 documents clés, un rapport structuré et un call d'explication — pour comprendre exactement ce que vous allez payer avant de signer.</p>
+          <a href="#audit" class="btn-primary">Réserver mon audit</a>
+        </div>
+        <div class="offer-card">
+          <span class="offer-eyebrow">Une question précise</span>
+          <h3>Call Expert</h3>
+          <div class="offer-price">90-120€ <span>call de 30-45 min</span></div>
+          <p class="offer-desc">Une inquiétude ou une question ciblée sur votre copropriété ? On en parle ensemble, sans analyse complète de documents.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEiOy0_72bwu4ENz1MvH9B3d8CA_ilNwSEg0gdo-xYXLu9qw/viewform" target="_blank" rel="noopener" class="btn-primary">Réserver mon Call Expert</a>
         </div>
       </div>
     </div>
@@ -648,7 +738,7 @@
       <div class="cta-stack">
         <a href="https://calendly.com/acexbrussels/call-copropriete-faire-le-point" class="btn-primary">Réserver mon audit</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEiOy0_72bwu4ENz1MvH9B3d8CA_ilNwSEg0gdo-xYXLu9qw/viewform" target="_blank" rel="noopener" class="btn-ghost">Autre service ? Me contacter</a>
-        <p class="cta-note">Formation copropriété et consultance expert disponibles sur demande.</p>
+        <p class="cta-note">Vous cherchez le Call Expert (90-120€) ? <a href="#offres" style="color:inherit;">Voir plus haut</a>. Formation copropriété disponible sur demande.</p>
       </div>
     </div>
   </section>
